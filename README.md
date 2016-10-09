@@ -5,7 +5,7 @@ Wilhelm
 <br>
 <pre align="center">Version checker for iOS app featuring server-side configuration</pre>
 </p>
-[![Swift](https://img.shields.io/badge/Swift-3.0-green.svg)](https://github.com/apple/swift) [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/CodeEagle/Wilhelm/master/LICENSE) [![Build Status](https://travis-ci.org/CodeEagle/CacheLeaf.svg?branch=master)](https://travis-ci.org/CodeEagle/CacheLeaf)
+[![Swift](https://img.shields.io/badge/Swift-3.0-green.svg)](https://github.com/apple/swift) [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/CodeEagle/Wilhelm/master/LICENSE) [![Build Status](https://travis-ci.org/CodeEagle/CacheLeaf.svg?branch=master)](https://travis-ci.org/CodeEagle/Wilhelm)
 Usage
 ---
 ```swift
@@ -31,10 +31,10 @@ Wiki
     /// - parameter language:         language to show, default cn
     /// - parameter ignore:           custom ignore title
     /// - parameter update:           custom update title
-    public static func handle(app bundleIdentifier: String, 
+    public static func handle(app bundleIdentifier: String,
     						  extraInfo: ServerSideAppControl? = nil,
-    						  language: ITCLanguage = .cn, 
-    						  customIgnore ignore: String? = nil, 
+    						  language: ITCLanguage = .cn,
+    						  customIgnore ignore: String? = nil,
     						  customUpdate update: String? = nil) { ... }
 ```
 Donations
