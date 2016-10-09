@@ -8,38 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		160BC5661DAA2E2100A698B5 /* Wilhelm.h in Headers */ = {isa = PBXBuildFile; fileRef = 160BC5641DAA2E2100A698B5 /* Wilhelm.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		160BC5751DAA2E4900A698B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BC5741DAA2E4900A698B5 /* AppDelegate.swift */; };
-		160BC5771DAA2E4900A698B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BC5761DAA2E4900A698B5 /* ViewController.swift */; };
-		160BC57A1DAA2E4900A698B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160BC5781DAA2E4900A698B5 /* Main.storyboard */; };
-		160BC57C1DAA2E4900A698B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160BC57B1DAA2E4900A698B5 /* Assets.xcassets */; };
-		160BC57F1DAA2E4900A698B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160BC57D1DAA2E4900A698B5 /* LaunchScreen.storyboard */; };
 		160BC5871DAA33DD00A698B5 /* Wilhelm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BC5861DAA33DD00A698B5 /* Wilhelm.swift */; };
-		160BC5881DAA33DD00A698B5 /* Wilhelm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BC5861DAA33DD00A698B5 /* Wilhelm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		160BC5611DAA2E2100A698B5 /* Wilhelm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Wilhelm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		160BC5641DAA2E2100A698B5 /* Wilhelm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wilhelm.h; sourceTree = "<group>"; };
 		160BC5651DAA2E2100A698B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		160BC5721DAA2E4900A698B5 /* WilhelmVanAstrea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilhelmVanAstrea.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		160BC5741DAA2E4900A698B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		160BC5761DAA2E4900A698B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		160BC5791DAA2E4900A698B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		160BC57B1DAA2E4900A698B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		160BC57E1DAA2E4900A698B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		160BC5801DAA2E4900A698B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		160BC5861DAA33DD00A698B5 /* Wilhelm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wilhelm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		160BC55D1DAA2E2100A698B5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		160BC56F1DAA2E4900A698B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,7 +34,6 @@
 			children = (
 				160BC5851DAA33DD00A698B5 /* Source */,
 				160BC5631DAA2E2100A698B5 /* Wilhelm */,
-				160BC5731DAA2E4900A698B5 /* WilhelmVanAstrea */,
 				160BC5621DAA2E2100A698B5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,7 +42,6 @@
 			isa = PBXGroup;
 			children = (
 				160BC5611DAA2E2100A698B5 /* Wilhelm.framework */,
-				160BC5721DAA2E4900A698B5 /* WilhelmVanAstrea.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,19 +53,6 @@
 				160BC5651DAA2E2100A698B5 /* Info.plist */,
 			);
 			path = Wilhelm;
-			sourceTree = "<group>";
-		};
-		160BC5731DAA2E4900A698B5 /* WilhelmVanAstrea */ = {
-			isa = PBXGroup;
-			children = (
-				160BC5741DAA2E4900A698B5 /* AppDelegate.swift */,
-				160BC5761DAA2E4900A698B5 /* ViewController.swift */,
-				160BC5781DAA2E4900A698B5 /* Main.storyboard */,
-				160BC57B1DAA2E4900A698B5 /* Assets.xcassets */,
-				160BC57D1DAA2E4900A698B5 /* LaunchScreen.storyboard */,
-				160BC5801DAA2E4900A698B5 /* Info.plist */,
-			);
-			path = WilhelmVanAstrea;
 			sourceTree = "<group>";
 		};
 		160BC5851DAA33DD00A698B5 /* Source */ = {
@@ -130,23 +95,6 @@
 			productReference = 160BC5611DAA2E2100A698B5 /* Wilhelm.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		160BC5711DAA2E4900A698B5 /* WilhelmVanAstrea */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 160BC5811DAA2E4900A698B5 /* Build configuration list for PBXNativeTarget "WilhelmVanAstrea" */;
-			buildPhases = (
-				160BC56E1DAA2E4900A698B5 /* Sources */,
-				160BC56F1DAA2E4900A698B5 /* Frameworks */,
-				160BC5701DAA2E4900A698B5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = WilhelmVanAstrea;
-			productName = WilhelmVanAstrea;
-			productReference = 160BC5721DAA2E4900A698B5 /* WilhelmVanAstrea.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,11 +109,6 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = L5W9FHSX92;
 						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
-					};
-					160BC5711DAA2E4900A698B5 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = L5W9FHSX92;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -184,7 +127,6 @@
 			projectRoot = "";
 			targets = (
 				160BC5601DAA2E2100A698B5 /* Wilhelm */,
-				160BC5711DAA2E4900A698B5 /* WilhelmVanAstrea */,
 			);
 		};
 /* End PBXProject section */
@@ -194,16 +136,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		160BC5701DAA2E4900A698B5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				160BC57F1DAA2E4900A698B5 /* LaunchScreen.storyboard in Resources */,
-				160BC57C1DAA2E4900A698B5 /* Assets.xcassets in Resources */,
-				160BC57A1DAA2E4900A698B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,36 +150,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		160BC56E1DAA2E4900A698B5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				160BC5771DAA2E4900A698B5 /* ViewController.swift in Sources */,
-				160BC5751DAA2E4900A698B5 /* AppDelegate.swift in Sources */,
-				160BC5881DAA33DD00A698B5 /* Wilhelm.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		160BC5781DAA2E4900A698B5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				160BC5791DAA2E4900A698B5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		160BC57D1DAA2E4900A698B5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				160BC57E1DAA2E4900A698B5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		160BC5671DAA2E2100A698B5 /* Debug */ = {
@@ -390,34 +293,6 @@
 			};
 			name = Release;
 		};
-		160BC5821DAA2E4900A698B5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L5W9FHSX92;
-				INFOPLIST_FILE = WilhelmVanAstrea/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SelfStudio.WilhelmVanAstrea;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		160BC5831DAA2E4900A698B5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L5W9FHSX92;
-				INFOPLIST_FILE = WilhelmVanAstrea/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SelfStudio.WilhelmVanAstrea;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -435,15 +310,6 @@
 			buildConfigurations = (
 				160BC56A1DAA2E2100A698B5 /* Debug */,
 				160BC56B1DAA2E2100A698B5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		160BC5811DAA2E4900A698B5 /* Build configuration list for PBXNativeTarget "WilhelmVanAstrea" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				160BC5821DAA2E4900A698B5 /* Debug */,
-				160BC5831DAA2E4900A698B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
