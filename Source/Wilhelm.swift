@@ -101,7 +101,7 @@ public final class Wilhelm {
             alert.addAction(ignoreAction)
         }
         DispatchQueue.main.async {
-            UIApplication.topMostViewController.show(alert, sender: nil)
+            UIApplication.topMostViewController.showDetailViewController(alert, sender: nil)
         }
     }
 }
