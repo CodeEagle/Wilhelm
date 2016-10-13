@@ -100,18 +100,13 @@ public final class Wilhelm {
             let ignoreAction = UIAlertAction(title: ignore, style: .cancel) { (_) in Wilhelm.happyEnd() }
             alert.addAction(ignoreAction)
         }
-        DispatchQueue.main.async {
-            UIApplication.topMostViewController.showDetailViewController(alert, sender: nil)
-        }
-    }
-}
-
-private extension UIApplication {
-    static var topMostViewController: UIViewController {
         var root = UIApplication.shared.windows.first?.rootViewController
         while(root == nil) { root = UIApplication.shared.windows.first?.rootViewController }
         var topController: UIViewController? = root
         while (topController?.presentedViewController != nil) { topController = topController?.presentedViewController }
-        return topController!
+        DispatchQueue.main.async {
+            topController?.showDetailViewController(alert, sender: nil)
+        }
     }
 }
+
