@@ -20,7 +20,7 @@ public final class Wilhelm {
         }
     }
     
-    private static var shared: Wilhelm! = Wilhelm()
+    private static var shared: Wilhelm? = Wilhelm()
     private static func happyEnd() { shared = nil }
     public enum ITCLanguage {
         case en, cn, custom(String)
@@ -41,7 +41,7 @@ public final class Wilhelm {
     /// - parameter ignore:           custom ignore title
     /// - parameter update:           custom update title
     public static func handle(app bundleIdentifier: String, extraInfo: ServerSideAppControl? = nil, language: ITCLanguage = .cn, customIgnore ignore: String? = nil, customUpdate update: String? = nil) {
-        Wilhelm.shared.handle(with: language, bundleIdentifier: bundleIdentifier, extraInfo: extraInfo, customIgnore: ignore, customUpdate: update)
+        Wilhelm.shared?.handle(with: language, bundleIdentifier: bundleIdentifier, extraInfo: extraInfo, customIgnore: ignore, customUpdate: update)
     }
     
     fileprivate func handle(with language: ITCLanguage, bundleIdentifier id: String, extraInfo: ServerSideAppControl?, customIgnore ignore: String? = nil, customUpdate update: String? = nil) {
