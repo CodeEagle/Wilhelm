@@ -91,6 +91,7 @@ public final class Wilhelm {
             }
             if id != "" {
                 let url = "itms-apps://itunes.apple.com/app/id\(id)"
+                print("[Wilhelm]: should open url:\(url)")
                 if let app = URL(string: url) { UIApplication.shared.openURL(app) }
             }
             Wilhelm.happyEnd()
