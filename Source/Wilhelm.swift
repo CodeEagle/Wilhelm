@@ -10,7 +10,7 @@ import UIKit
 
 /// Wilhelm van Astrea
 public final class Wilhelm {
-    
+
     public struct ServerSideAppControl {
         internal let version: String
         internal let forceUpdate: Bool
@@ -19,7 +19,7 @@ public final class Wilhelm {
             self.forceUpdate = forceUpdate
         }
     }
-    
+
     private static var shared: Wilhelm? = Wilhelm()
     private static func happyEnd() { shared = nil }
     public enum ITCLanguage {
@@ -28,11 +28,11 @@ public final class Wilhelm {
             switch self {
             case .en: return "en"
             case .cn: return "cn"
-            case .custom(let custom): return custom
+            case let .custom(custom): return custom
             }
         }
     }
-    private init() { }
+    private init() {}
     /// handle works
     ///
     /// - parameter bundleIdentifier: bundle id of querying app, such as com.abc.com
@@ -43,24 +43,25 @@ public final class Wilhelm {
     public static func handle(app bundleIdentifier: String, extraInfo: ServerSideAppControl? = nil, language: ITCLanguage = .cn, customIgnore ignore: String? = nil, customUpdate update: String? = nil) {
         Wilhelm.shared?.handle(with: language, bundleIdentifier: bundleIdentifier, extraInfo: extraInfo, customIgnore: ignore, customUpdate: update)
     }
-    
+
     fileprivate func handle(with language: ITCLanguage, bundleIdentifier id: String, extraInfo: ServerSideAppControl?, customIgnore ignore: String? = nil, customUpdate update: String? = nil) {
         let raw = "https://itunes.apple.com/lookup?bundleId=\(id)&country=\(language.raw)"
         guard let url = URL(string: raw) else { return }
-        let task = URLSession.shared.dataTask(with: url) {[weak self] (data, _, _) in
+        let req = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 30)
+        let task = URLSession.shared.dataTask(with: req) { [weak self] data, _, _ in
             guard let d = data else { return }
             do {
                 let json = try JSONSerialization.jsonObject(with: d, options: .allowFragments)
                 let forceUpdate = extraInfo?.forceUpdate ?? false
-                if let dic = json as? [String : Any],
+                if let dic = json as? [String: Any],
                     let results = dic["results"] as? [Any],
-                    let first = results.first as? [String : Any],
+                    let first = results.first as? [String: Any],
                     let appStoreVersion = first["version"] as? String,
                     let localAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String,
                     let releaseNotes = first["releaseNotes"] as? String,
                     let url = first["trackViewUrl"] as? String,
                     let serverVersion = (extraInfo?.version) ?? (first["version"] as? String),
-                    appStoreVersion > localAppVersion && serverVersion >= appStoreVersion  {
+                    appStoreVersion > localAppVersion && serverVersion >= appStoreVersion {
                     var updateTitle: String {
                         if let u = update { return u }
                         else if case ITCLanguage.en = language { return "Update Now" } else { return "现在升级" }
@@ -78,10 +79,10 @@ public final class Wilhelm {
         }
         task.resume()
     }
-    
+
     private func showTips(with title: String, message msg: String, forceUpdate: Bool, url: String, ignore: String, update: String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        let updateAction = UIAlertAction(title: update, style: .default) { (_) in
+        let updateAction = UIAlertAction(title: update, style: .default) { _ in
             var id: String {
                 let pattern = "(?<=\\bid)\\d{1,}+\\b"
                 guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else { return "" }
@@ -98,16 +99,15 @@ public final class Wilhelm {
         }
         alert.addAction(updateAction)
         if !forceUpdate {
-            let ignoreAction = UIAlertAction(title: ignore, style: .cancel) { (_) in Wilhelm.happyEnd() }
+            let ignoreAction = UIAlertAction(title: ignore, style: .cancel) { _ in Wilhelm.happyEnd() }
             alert.addAction(ignoreAction)
         }
         var root = UIApplication.shared.windows.first?.rootViewController
-        while(root == nil) { root = UIApplication.shared.windows.first?.rootViewController }
+        while root == nil { root = UIApplication.shared.windows.first?.rootViewController }
         var topController: UIViewController? = root
-        while (topController?.presentedViewController != nil) { topController = topController?.presentedViewController }
+        while topController?.presentedViewController != nil { topController = topController?.presentedViewController }
         DispatchQueue.main.async {
             topController?.showDetailViewController(alert, sender: nil)
         }
     }
 }
-

@@ -7,11 +7,14 @@
 //
 
 import UIKit
-
+import Wilhelm
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let control = Wilhelm.ServerSideAppControl(version: "6.1.0", forceUpdate: false)
+        let lang: Wilhelm.ITCLanguage = .cn
+        Wilhelm.handle(app: "net.luoo.LuooFM", extraInfo: control, language: lang)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -19,7 +22,4 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-

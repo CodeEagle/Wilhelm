@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1084F5561F0B53B2009706E9 /* Wilhelm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160BC5611DAA2E2100A698B5 /* Wilhelm.framework */; };
+		1084F5571F0B53B2009706E9 /* Wilhelm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 160BC5611DAA2E2100A698B5 /* Wilhelm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		160BC5661DAA2E2100A698B5 /* Wilhelm.h in Headers */ = {isa = PBXBuildFile; fileRef = 160BC5641DAA2E2100A698B5 /* Wilhelm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		160BC5751DAA2E4900A698B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BC5741DAA2E4900A698B5 /* AppDelegate.swift */; };
 		160BC5771DAA2E4900A698B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BC5761DAA2E4900A698B5 /* ViewController.swift */; };
@@ -16,6 +18,30 @@
 		160BC5871DAA33DD00A698B5 /* Wilhelm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BC5861DAA33DD00A698B5 /* Wilhelm.swift */; };
 		160BC5881DAA33DD00A698B5 /* Wilhelm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BC5861DAA33DD00A698B5 /* Wilhelm.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1084F5581F0B53B2009706E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 160BC5581DAA2E2100A698B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 160BC5601DAA2E2100A698B5;
+			remoteInfo = Wilhelm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1084F55A1F0B53B3009706E9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1084F5571F0B53B2009706E9 /* Wilhelm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		160BC5611DAA2E2100A698B5 /* Wilhelm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Wilhelm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1084F5561F0B53B2009706E9 /* Wilhelm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,10 +164,12 @@
 				160BC56E1DAA2E4900A698B5 /* Sources */,
 				160BC56F1DAA2E4900A698B5 /* Frameworks */,
 				160BC5701DAA2E4900A698B5 /* Resources */,
+				1084F55A1F0B53B3009706E9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1084F5591F0B53B2009706E9 /* PBXTargetDependency */,
 			);
 			name = WilhelmVanAstrea;
 			productName = WilhelmVanAstrea;
@@ -229,6 +258,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1084F5591F0B53B2009706E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 160BC5601DAA2E2100A698B5 /* Wilhelm */;
+			targetProxy = 1084F5581F0B53B2009706E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		160BC5781DAA2E4900A698B5 /* Main.storyboard */ = {
@@ -393,6 +430,7 @@
 		160BC5821DAA2E4900A698B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L5W9FHSX92;
 				INFOPLIST_FILE = WilhelmVanAstrea/Info.plist;
@@ -407,6 +445,7 @@
 		160BC5831DAA2E4900A698B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L5W9FHSX92;
 				INFOPLIST_FILE = WilhelmVanAstrea/Info.plist;
